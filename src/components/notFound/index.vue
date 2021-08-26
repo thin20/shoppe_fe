@@ -1,14 +1,13 @@
 <template>
-  <div>
-    <router-view></router-view>
-  </div>
+  <h1>file not found - 404</h1>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'not-found'
 }
 </script>
 
 <style>
+
 </style>

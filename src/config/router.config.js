@@ -1,4 +1,5 @@
-import UserLayout from '@/views/user/index.vue'
+import UserLayout from '@/views/user'
+import NotFound from '@/components/notFound'
 
 const RouteView = {
   name: 'RouteView',
@@ -29,5 +30,10 @@ export const asyncRouterMapUser = [
         component: () => import('@/views/user/cart')
       }
     ]
+  },
+  {
+    path: '*',
+    name: 'notfound',
+    component: NotFound
   }
 ]
