@@ -37,56 +37,8 @@
                     <i class="header__navbar-icon far fa-bell"></i>
                     Thông báo
                 </a>
-                <div class="header__notify">
-                    <header class="header__notify-header">
-                        <h3>Thông báo mới nhận</h3>
-                    </header>
-                    <ul class="header__notify-list">
-                        <li class="header__notify-item header__notify-item--new">
-                            <span>
-                                <img src="https://img.abaha.vn/photos/resized/200x120/121-1608210033-demoweb.png"
-                                     alt="mỹ phẩm" class="header__notify-img">
-                            </span>
-                            <div class="header__notify-info">
-                                <span class="header__notify-name">Chương trình khách hàng thân thiết</span>
-                                <span class="header__notify-desc">
-                                    Để cảm ơn sự ủng hộ và yêu mến của quý
-                                    khách đên với chúng tôi, chương trình khách hàng thân thiết đã được
-                                    ra
-                                </span>
-                            </div>
-                        </li>
-                        <li class="header__notify-item header__notify-item--new">
-                            <span>
-                                <img src="https://img.abaha.vn/photos/resized/200x120/83-1595936336-myphamohui-lgvina.png"
-                                     alt="mỹ phẩm" class="header__notify-img">
-                            </span>
-                            <div class="header__notify-info">
-                                <span class="header__notify-name">
-                                    Tặng ngay combo 5 gói mặt nạ thải độc
-                                    Su:m37
-                                </span>
-                                <span class="header__notify-desc">Khuyến mại siêu hot</span>
-                            </div>
-                        </li>
-                        <li class="header__notify-item">
-                            <span>
-                                <img src="https://img.abaha.vn/photos/resized/200x120/83-1590399520-myphamohui-lgvina.png"
-                                     alt="mỹ phẩm" class="header__notify-img">
-                            </span>
-                            <div class="header__notify-info">
-                                <span class="header__notify-name">
-                                    Day Shield Perfect Sun - Cho nàng thơ tự
-                                    tin "tỏa nắng"
-                                </span>
-                                <span class="header__notify-desc">Mô tả mỹ phẩm Ohui chính hãng</span>
-                            </div>
-                        </li>
-                    </ul>
-                    <footer class="header__notify-footer">
-                        <a href="#" class="header__notify-footer-btn">Xem tất cả</a>
-                    </footer>
-                </div>
+                <!-- header notify -->
+                <header-notify></header-notify>
             </li>
             <li class="header__navbar-item header__navbar-item--strong">
                 <a href="#" class="header__navbar-item-link">
@@ -94,27 +46,10 @@
                     Trợ giúp
                 </a>
             </li>
+            <!-- login on pc -->
             <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate"><a href="#" class="header__navbar-item-link">Đăng ký</a></li>
             <li class="header__navbar-item header__navbar-item--strong"><a href="#" class="header__navbar-item-link">Đăng nhập</a></li>
-            <li class="header__navbar-item header__navbar-user">
-                <img src="@/assets/img/user.png" alt="User" class="header__navbar-user-img">
-                <span class="header__navbar-item-name">nguyen cao thin</span>
-
-                <ul class="header__navbar-user-menu">
-                    <li class="header__navbar-user-item">
-                        <a href="#">Tài khoản của tôi</a>
-                    </li>
-                    <li class="header__navbar-user-item">
-                      <a href="#">Địa chỉ của tôi</a>
-                    </li>
-                    <li class="header__navbar-user-item">
-                        <a href="#">Đơn mua</a>
-                    </li>
-                    <li class="header__navbar-user-item header__navbar-user-item--separate">
-                      <a href>Đăng xuất</a>
-                    </li>
-                </ul>
-            </li>
+            <LoginPC></LoginPC>
         </ul>
     </nav>
 
@@ -170,234 +105,12 @@
 
         <div class="wrap-cart-login">
             <!-- Cart -->
-            <div class="header__cart">
-                <div class="header__cart-wrap">
-                    <i class="fas fa-shopping-cart header__cart-icon"></i>
-                      <span class="header__cart-notify">5</span> <!-- No cart: header__cart-list--no-cart -->
-                      <div class="header__cart-list">
-                        <img src="@/assets/img/no-cart.png" alt="No cart" class="header__cart--no-cart-img">
-                        <span class="header__cart-list--no-cart-msg">Chưa có sản phẩm</span>
-                        <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
-                        <ul class="header__cart-list-item">
-                          <li class="header__cart-item">
-                              <img src="@/assets/img/product1.png" alt="" class="header__cart-img">
-                              <div class="header__cart-item-info">
-                                  <div class="header__cart-item-head">
-                                      <h5 class="header__cart-item-name">
-                                          Bộ kem đặc trị vùng mắtBộ kem đặc
-                                          trị
-                                          vùng mắtBộ kem đặc trị vùng mắtBộ kem đặc trị vùng mắtBộ kem đặc
-                                          trị
-                                          vùng mắtBộ kem đặc trị vùng mắtBộ kem đặc trị vùng mắtBộ kem đặc
-                                          trị
-                                          vùng mắtBộ kem đặc trị vùng mắtBộ kem đặc trị vùng mắtBộ kem đặc
-                                          trị
-                                          vùng mắtBộ kem đặc trị vùng mắtBộ kem đặc trị vùng mắt
-                                      </h5>
-                                      <div class="header__cart-item-price-wrap">
-                                          <span class="header__cart-item-price">2.000.000đ</span>
-                                          <span class="header__cart-item-multiply">x</span>
-                                          <span class="header__cart-item-qnt">2</span>
-                                      </div>
-                                  </div>
-
-                                  <div class="header__cart-item-body">
-                                      <span class="header__cart-item-description">
-                                          Phân loại: Bạc
-                                      </span>
-                                      <span class="header__cart-item-remove">Xóa</span>
-                                  </div>
-                              </div>
-                          </li>
-                          <li class="header__cart-item">
-                              <img src="@/assets/img/product2.png" alt="" class="header__cart-img">
-                              <div class="header__cart-item-info">
-                                  <div class="header__cart-item-head">
-                                      <h5 class="header__cart-item-name">Set rửa mặt</h5>
-                                      <div class="header__cart-item-price-wrap">
-                                          <span class="header__cart-item-price">1.035.000đ</span>
-                                          <span class="header__cart-item-multiply">x</span>
-                                          <span class="header__cart-item-qnt">3</span>
-                                      </div>
-                                  </div>
-
-                                  <div class="header__cart-item-body">
-                                      <span class="header__cart-item-description">
-                                          Phân loại: bạc
-                                      </span>
-                                      <span class="header__cart-item-remove">Xóa</span>
-                                  </div>
-                              </div>
-                          </li>
-                          <li class="header__cart-item">
-                              <img src="@/assets/img/product3.png" alt="" class="header__cart-img">
-                              <div class="header__cart-item-info">
-                                  <div class="header__cart-item-head">
-                                      <h5 class="header__cart-item-name">Set tinh chất</h5>
-                                      <div class="header__cart-item-price-wrap">
-                                          <span class="header__cart-item-price">2.970.000đ</span>
-                                          <span class="header__cart-item-multiply">x</span>
-                                          <span class="header__cart-item-qnt">2</span>
-                                      </div>
-                                  </div>
-
-                                  <div class="header__cart-item-body">
-                                      <span class="header__cart-item-description">
-                                          Phân loại: Bạc
-                                      </span>
-                                      <span class="header__cart-item-remove">Xóa</span>
-                                  </div>
-                              </div>
-                          </li>
-                          <li class="header__cart-item">
-                              <img src="@/assets/img/product3.png" alt="" class="header__cart-img">
-                              <div class="header__cart-item-info">
-                                  <div class="header__cart-item-head">
-                                      <h5 class="header__cart-item-name">Set tinh chất</h5>
-                                      <div class="header__cart-item-price-wrap">
-                                          <span class="header__cart-item-price">2.970.000đ</span>
-                                          <span class="header__cart-item-multiply">x</span>
-                                          <span class="header__cart-item-qnt">2</span>
-                                      </div>
-                                  </div>
-
-                                  <div class="header__cart-item-body">
-                                      <span class="header__cart-item-description">
-                                          Phân loại: Bạc
-                                      </span>
-                                      <span class="header__cart-item-remove">Xóa</span>
-                                  </div>
-                              </div>
-                          </li>
-                          <li class="header__cart-item">
-                              <img src="@/assets/img/product3.png" alt="" class="header__cart-img">
-                              <div class="header__cart-item-info">
-                                  <div class="header__cart-item-head">
-                                      <h5 class="header__cart-item-name">Set tinh chất</h5>
-                                      <div class="header__cart-item-price-wrap">
-                                          <span class="header__cart-item-price">2.970.000đ</span>
-                                          <span class="header__cart-item-multiply">x</span>
-                                          <span class="header__cart-item-qnt">2</span>
-                                      </div>
-                                  </div>
-
-                                  <div class="header__cart-item-body">
-                                      <span class="header__cart-item-description">
-                                          Phân loại: Bạc
-                                      </span>
-                                      <span class="header__cart-item-remove">Xóa</span>
-                                  </div>
-                              </div>
-                          </li>
-                          <li class="header__cart-item">
-                              <img src="@/assets/img/product3.png" alt="" class="header__cart-img">
-                              <div class="header__cart-item-info">
-                                  <div class="header__cart-item-head">
-                                      <h5 class="header__cart-item-name">Set tinh chất</h5>
-                                      <div class="header__cart-item-price-wrap">
-                                          <span class="header__cart-item-price">2.970.000đ</span>
-                                          <span class="header__cart-item-multiply">x</span>
-                                          <span class="header__cart-item-qnt">2</span>
-                                      </div>
-                                  </div>
-
-                                  <div class="header__cart-item-body">
-                                      <span class="header__cart-item-description">
-                                          Phân loại: Bạc
-                                      </span>
-                                      <span class="header__cart-item-remove">Xóa</span>
-                                  </div>
-                              </div>
-                          </li>
-                          <li class="header__cart-item">
-                              <img src="@/assets/img/product3.png" alt="" class="header__cart-img">
-                              <div class="header__cart-item-info">
-                                  <div class="header__cart-item-head">
-                                      <h5 class="header__cart-item-name">Set tinh chất</h5>
-                                      <div class="header__cart-item-price-wrap">
-                                          <span class="header__cart-item-price">2.970.000đ</span>
-                                          <span class="header__cart-item-multiply">x</span>
-                                          <span class="header__cart-item-qnt">2</span>
-                                      </div>
-                                  </div>
-
-                                  <div class="header__cart-item-body">
-                                      <span class="header__cart-item-description">
-                                          Phân loại: Bạc
-                                      </span>
-                                      <span class="header__cart-item-remove">Xóa</span>
-                                  </div>
-                              </div>
-                          </li>
-                          <li class="header__cart-item">
-                              <img src="@/assets/img/product3.png" alt="" class="header__cart-img">
-                              <div class="header__cart-item-info">
-                                  <div class="header__cart-item-head">
-                                      <h5 class="header__cart-item-name">Set tinh chất</h5>
-                                      <div class="header__cart-item-price-wrap">
-                                          <span class="header__cart-item-price">2.970.000đ</span>
-                                          <span class="header__cart-item-multiply">x</span>
-                                          <span class="header__cart-item-qnt">2</span>
-                                      </div>
-                                  </div>
-
-                                  <div class="header__cart-item-body">
-                                      <span class="header__cart-item-description">
-                                          Phân loại: Bạc
-                                      </span>
-                                      <span class="header__cart-item-remove">Xóa</span>
-                                  </div>
-                              </div>
-                          </li>
-                          <li class="header__cart-item">
-                              <img src="@/assets/img/product3.png" alt="" class="header__cart-img">
-                              <div class="header__cart-item-info">
-                                  <div class="header__cart-item-head">
-                                      <h5 class="header__cart-item-name">Set tinh chất</h5>
-                                      <div class="header__cart-item-price-wrap">
-                                          <span class="header__cart-item-price">2.970.000đ</span>
-                                          <span class="header__cart-item-multiply">x</span>
-                                          <span class="header__cart-item-qnt">2</span>
-                                      </div>
-                                  </div>
-
-                                  <div class="header__cart-item-body">
-                                      <span class="header__cart-item-description">
-                                          Phân loại: Bạc
-                                      </span>
-                                      <span class="header__cart-item-remove">Xóa</span>
-                                  </div>
-                              </div>
-                          </li>
-                        </ul>
-                        <a href="/cart" class="header__cart-view-cart btn btn--primary">Xem giỏ hàng</a>
-                    </div>
-                </div>
-            </div>
+            <cart-header></cart-header>
 
             <!-- Login on mobile and tablet -->
-            <div class="login-on-mobile-tablet header__navbar-item header__navbar-user hide-on-pc">
-                <img src="@/assets/img/user.png" alt="User" class="header__navbar-user-img">
-
-                <ul class="header__navbar-user-menu">
-                    <li class="header__navbar-user-item">
-                        <a href="#">Nguyễn Cao Thìn</a>
-                    </li>
-                    <li class="header__navbar-user-item">
-                        <a href="/user/profile">Tài khoản của tôi</a>
-                    </li>
-                    <li class="header__navbar-user-item">
-                        <a href="#">Địa chỉ của tôi</a>
-                    </li>
-                    <li class="header__navbar-user-item">
-                        <a href="#">Đơn mua</a>
-                    </li>
-                    <li class="header__navbar-user-item header__navbar-user-item--separate">
-                        <a href="#">Đăng xuất</a>
-                    </li>
-                </ul>
-            </div>
+            <login-mobile-tablet></login-mobile-tablet>
         </div>
+        <sort-mobile></sort-mobile>
     </div>
 </div>
 
@@ -405,8 +118,20 @@
 </template>
 
 <script>
+import HeaderNotify from '@/components/user/header/header_notify'
+import LoginPC from '@/components/user/header/login_pc'
+import CartHeader from '@/components/user/header/cart_header'
+import SortMobile from '@/components/user/header/sort_mobile'
+import LoginMobileTablet from '@/components/user/header/login_mobile_tablet'
 export default {
-  name: 'header-user'
+  name: 'header-user',
+  components: {
+    HeaderNotify,
+    LoginPC,
+    CartHeader,
+    SortMobile,
+    LoginMobileTablet
+  }
 }
 </script>
 
