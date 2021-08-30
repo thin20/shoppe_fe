@@ -24,6 +24,11 @@ export const asyncRouterMapUser = [
         component: () => import('@/views/user/products_by_category')
       },
       {
+        path: '/product-detail/:productId',
+        name: 'product-detail',
+        component: () => import('@/views/user/product_detail')
+      },
+      {
         path: '/cart',
         name: 'cart',
         component: () => import('@/views/user/cart')

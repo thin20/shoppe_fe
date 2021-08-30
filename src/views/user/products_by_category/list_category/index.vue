@@ -33,7 +33,7 @@
                 <a href="#" class="category-item__link">Kem chống lẻ</a>
             </li>
         </ul>
-        </nav>
+    </nav>
 </template>
 
 <script>
