@@ -11,7 +11,6 @@ console.log(RouteView)
 export const asyncRouterMapUser = [
   {
     path: '/',
-    name: 'user',
     component: UserLayout,
     children: [
       {

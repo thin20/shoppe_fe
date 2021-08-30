@@ -24,10 +24,10 @@
             </li>
             <li class="header__navbar-item">
                 <span class="header__navbar-title--no-pointer">Kết nối</span>
-                <a href="#" class="header_navbar-icon-link">
+                <div class="header_navbar-icon-link">
                     <i class="header__navbar-icon fab fa-facebook"></i>
                     <i class="header__navbar-icon fab fa-instagram"></i>
-                </a>
+                </div>
             </li>
         </ul>
 

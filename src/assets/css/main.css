@@ -1314,6 +1314,7 @@ span.home-produce-item__origin-name {
     border-top-right-radius: 2px;
     text-align: center;
     display:flex;
+    flex-direction: column;
     justify-content : center;
     align-items : center;
 }
