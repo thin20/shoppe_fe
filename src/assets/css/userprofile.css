@@ -46,16 +46,16 @@
     height: 20px;
 }
 
-    .userpage-icon svg {
-        fill: #fff;
-        stroke: #fff;
-        width: 13px;
-        height: 13px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
+.userpage-icon svg {
+    fill: #fff;
+    stroke: #fff;
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 
 .tab {
@@ -64,35 +64,35 @@
     margin-bottom: 10px;
 }
 
-    .tab button {
-        width: 20%;
-        float: left;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        padding: 15px;
-        font-size: 16px;
-        position: relative;
-        background-color: rgb(255,255,255);
-    }
+.tab button {
+    width: 20%;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 16px;
+    position: relative;
+    background-color: rgb(255,255,255);
+}
 
-        .tab button.active:after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background-color: var(--primary-color);
-        }
+.tab button.active:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+}
 
-        .tab button:hover {
-            color: var(--primary-color);
-        }
+.tab button:hover {
+    color: var(--primary-color);
+}
 
-        .tab button.active {
-            color: var(--primary-color);
-        }
+.tab button.active {
+    color: var(--primary-color);
+}
 
 .purchase-list-page__empty-page-wrapper {
     background-color: rgb(255,255,255);
@@ -176,25 +176,25 @@
     align-items: center;
 }
 
-    .spinner > div {
-        width: 18px;
-        height: 18px;
-        background-color: var(--primary-color) !important;
-        border-radius: 100%;
-        display: inline-block;
-        -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-        animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-    }
+.spinner > div {
+    width: 18px;
+    height: 18px;
+    background-color: var(--primary-color) !important;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
 
-    .spinner .bounce1 {
-        -webkit-animation-delay: -0.32s;
-        animation-delay: -0.32s;
-    }
+.spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
 
-    .spinner .bounce2 {
-        -webkit-animation-delay: -0.16s;
-        animation-delay: -0.16s;
-    }
+.spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
 
 @-webkit-keyframes sk-bouncedelay {
     0%, 80%, 100% {

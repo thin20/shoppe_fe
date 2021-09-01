@@ -41,5 +41,36 @@ export default {
 </script>
 
 <style>
+.weeklyPreview {
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.weeklyPreview img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.weeklyPreview div {
+    position: relative;
+}
+
+.weeklyPreview div::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url(https://www.flaticon.com/svg/vstatic/svg/1828/1828945.svg?token=exp=1620505409~hmac=dfe311db4e0a62036810a211fa615513);
+    top: 4px;
+    right: 2px;
+    z-index: 1;
+    background-position: center;
+    background-size: cover;
+    background-color: white;
+    border-radius: 100%;
+    cursor: pointer;
+}
 </style>
