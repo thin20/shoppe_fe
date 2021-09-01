@@ -47,7 +47,7 @@
                         <div class="cart-page-footer__second-summary">Nhận thêm: 0 Xu</div>
                     </div>
                     <div class="cart-page-footer__checkout">
-                        <button type="button" class="btn shopee-button-solid">Mua Hàng</button>
+                        <button type="button" class="btn shopee-button-solid" @click="buyProducts">Mua Hàng</button>
                     </div>
                 </div>
             </div>
@@ -124,7 +124,7 @@ export default {
         ]
       }
     ]
-    let newList = this.listBillBySeller
+    let newList = [...this.listBillBySeller]
     newList.forEach(item => {
       item.bills.forEach(bill => {
         bill.checked = false
@@ -138,7 +138,7 @@ export default {
   },
   methods: {
     handleChangeQuantityProduct ({ idSeller, indexBill, n }) {
-      let newList = this.listBillBySeller
+      let newList = [...this.listBillBySeller]
       newList.forEach(item => {
         if (item.idSeller === idSeller) {
           item.bills[indexBill].quantity = n
@@ -146,9 +146,10 @@ export default {
       })
       this.listBillBySeller = newList
       this.calcTotalPrice()
+      this.keyRerender = !this.keyRerender
     },
     handleProductChecked ({ idSeller, indexBill }) {
-      let newList = this.listBillBySeller
+      let newList = [...this.listBillBySeller]
       newList.forEach(item => {
         if (item.idSeller === idSeller) {
           item.bills[indexBill].checked = !item.bills[indexBill].checked
@@ -208,6 +209,24 @@ export default {
       })
       this.totalPrice = totalPrice
       this.totalProductChecked = totalProductChecked
+    },
+    buyProducts () {
+      let productsBuy = []
+      let newList = [...this.listBillBySeller]
+      newList = newList.filter(item => {
+        item.bills = item.bills.filter(bill => {
+          if (bill.checked) {
+            productsBuy = productsBuy.concat(bill.product)
+            return false
+          }
+          return true
+        })
+        return item.bills.length > 0
+      })
+      this.listBillBySeller = newList
+      console.log('Products bought: ', productsBuy)
+      console.log('Product remain in cart: ', this.listBillBySeller)
+      this.keyRerender = !this.keyRerender
     }
   }
 }

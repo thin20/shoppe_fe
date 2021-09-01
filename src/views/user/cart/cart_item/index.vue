@@ -23,7 +23,7 @@
                     </div>
                     <div class="quantity-product cart-item__cell-quantity col col-lg-2 col-md-2 col-sm-12">
                         <button class="btn-sub-quantity" @click="handleSubQuantityProduct">-</button>
-                        <input type="number" class="input-quantity" :value="bill.quantity" min="1" max="99" @input="handleChangeQuantityProduct">
+                        <input type="number" class="input-quantity" :value="bill.quantity" @input="handleChangeQuantityProduct" ref="inputQuantity">
                         <button class="btn-add-quantity" @click="handleAddQuantityProduct">+</button>
                     </div>
                     <div class="cart-item__cell-total-price col col-lg-2 col-md-2 col-sm-12">
@@ -79,11 +79,12 @@ export default {
       }
     },
     handleChangeQuantityProduct (e) {
+      this.$refs.inputQuantity.focus()
       let value = Number.parseInt(e.target.value)
       if (value <= 0 || !value) {
         value = 1
       }
-      this.$emit('changeQuantityProduct', { indexBill: this.index, n: this.bill.quantity - 1 })
+      this.$emit('changeQuantityProduct', { indexBill: this.index, n: value })
     },
     handleChecked () {
       this.$emit('productChecked', { indexBill: this.index })
@@ -207,6 +208,15 @@ export default {
     border: 1px solid #c3c3c3;
     text-align: center;
     outline: none;
+    /* hid arrow number */
+    -webkit-appearance: none !important;
+    -moz-appearance: textfield;
+}
+
+.input-quantity::-webkit-outer-spin-button,
+.input-quantity::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .cart-item__cell-total-price {
